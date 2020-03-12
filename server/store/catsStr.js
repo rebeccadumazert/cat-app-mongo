@@ -4,10 +4,16 @@ const ObjectId = require('mongodb').ObjectID;
 
 const url = 'mongodb://192.168.99.100:27017';
 
+const uri =
+  'mongodb+srv://cluster0-2i29x.mongodb.net/test?retryWrites=true&w=majority';
+
 let db = null;
 
+const finalURL = process.env.NODE_ENV === 'production' ? uri : url;
+
 const initializeDbConnexion = async () => {
-  const client = await MongoClient.connect(url, {
+  console.log(finalURL, auth);
+  const client = await MongoClient.connect(finalURL, {
     auth,
     poolSize: 10,
     useNewUrlParser: true,

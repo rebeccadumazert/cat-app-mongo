@@ -4,9 +4,21 @@ import { Link } from 'react-router-dom';
 export const CatsContainer = styled.div`
   display: flex;
   justify-content: center;
+  width: 100vw;
 `;
 export const CatContainer = styled.div`
   flex: 0 0 30%;
+  @media (max-width: 500px) {
+    flex: 0 0 45%;
+    padding: 10px 5px 10px 5px;
+  }
+`;
+
+export const VSContainer = styled.div`
+  flex: 0 0 30%;
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const CatPicture = styled.img`
@@ -14,6 +26,9 @@ export const CatPicture = styled.img`
   border-radius: 5%;
   width: 100%;
   height: 50vh;
+  @media (max-width: 500px) {
+    height: 35vh;
+  }
 `;
 
 export const Title = styled.h1`
@@ -25,6 +40,9 @@ export const Title = styled.h1`
   -webkit-text-fill-color: transparent;
   margin-top: 20px;
   padding-bottom: 40px;
+  @media (max-width: 500px) {
+    padding-bottom: 0;
+  }
 `;
 
 export const Button = styled.button`
@@ -45,6 +63,9 @@ export const Button = styled.button`
   font-family: 'Permanent Marker', cursive;
   color: #ff7601;
   font-size: larger;
+  @media (max-width: 500px) {
+    margin-top: 50px;
+  }
 `;
 
 export const LinkResults = styled(Link)`

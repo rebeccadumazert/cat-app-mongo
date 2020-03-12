@@ -4,7 +4,7 @@ import {
   CatsContainer,
   Title,
   Button,
-  CatContainer,
+  VSContainer,
   CatPicture,
   LinkResults,
 } from './styles/Cat';
@@ -51,9 +51,9 @@ export const CatsMatching = () => {
           catLooser={cats[index + 1]}
           updateDatas={updateDatas}
         ></Cat>
-        <CatContainer>
+        <VSContainer>
           <CatPicture src={GIF_VS} alt="" />
-        </CatContainer>
+        </VSContainer>
         <Cat
           cat={cats[index + 1]}
           catLooser={cats[index]}

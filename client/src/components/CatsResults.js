@@ -5,7 +5,7 @@ import {
   ContainerWinner,
   ContainerImgWinner,
   Winner,
-  Title,
+  IconTrophy,
   Points,
 } from './styles/Winners';
 import { IconCat } from './IconCat';
@@ -29,7 +29,12 @@ export const CatsResults = () => {
       <Link to="/">
         <IconCat></IconCat>
       </Link>
-      <Title>Et les winners sont ...</Title>
+      <IconTrophy>
+        <img
+          src="https://img.icons8.com/doodle/48/000000/trophy--v1.png"
+          alt="torphy"
+        />
+      </IconTrophy>
       <ContainerWinner>
         {winningCats.map(({ catUrl, _id, wonMatches }) => (
           <ContainerImgWinner key={_id}>
